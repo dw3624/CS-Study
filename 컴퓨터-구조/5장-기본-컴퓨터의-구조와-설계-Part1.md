@@ -69,12 +69,25 @@
 
 ### 타이밍과 제어 (Timing and Control)
 
-- 
+- 명령어 실행 타이밍 예
+  - $D_3 T_4 : SC ← 0$
+
 
 ### 명령어 사이클 (Instruction Cycle)
 
-- 
+- 명령어 사이클 단계
+  1. 메모리에서 명령어 가져오기(Fetch)
+  2. 명령어 디코딩
+  3. 유효주소(Effective Address) 계산
+  4. 명령어 실행
+- Fetch와 Decode
+  - $T_0 : AR ← PC$
+  - $T_1 : IR ← M[AR], PC ← PC + 1$
+  - $ T_2 : D_0, ..., D_7 ← decode IR(12-14), AR ← IR(0-11), I ← IR(15)$
+
 
 ### 메모리 참조 명령어 (Memory-Reference Instuctions)
 
--
+![image-20220623134816840](5장-기본-컴퓨터의-구조와-설계-Part1.assets/image-20220623134816840-16559597008601.png)
+
+![image-20220623134929084](5장-기본-컴퓨터의-구조와-설계-Part1.assets/image-20220623134929084-16559597711332.png)
